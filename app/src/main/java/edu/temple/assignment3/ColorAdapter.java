@@ -2,6 +2,7 @@ package edu.temple.assignment3;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +45,7 @@ public class ColorAdapter extends BaseAdapter {
         View v = inflater.inflate(R.layout.color_item, viewGroup, false);
         TextView color_name = (TextView) v.findViewById(R.id.color_text);
         color_name.setText(current_color);
+        v.setBackgroundColor(Color.parseColor(current_color));
         return v;
     }
 }

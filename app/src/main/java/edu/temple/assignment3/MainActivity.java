@@ -13,7 +13,7 @@ import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    String[] colors = {"red", "blue", "green", "grey", "cyan", "magenta", "yellow", "fuchsia", "lime", "maroon", "navy", "purple"};
+    String[] colors = {"red", "blue", "green", "grey", "cyan", "magenta", "yellow", "olive", "lime", "maroon", "navy", "purple"};
     Spinner colorSpinner;
 
     @Override
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         view.getRootView().setBackgroundColor(Color.parseColor(colors[i]));
+        view.setBackgroundColor(Color.WHITE);
     }
 
     @Override
